@@ -16,7 +16,7 @@ export default function Navbar() {
             <Link to='/products/new'>
                 <BsFillPencilFill />
             </Link>
-
+            <button>Login</button>
         </nav>
     </header>
   )
