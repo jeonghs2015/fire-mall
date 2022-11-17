@@ -1280,7 +1280,7 @@
   "resolved" "https://registry.npmjs.org/@firebase/app-types/-/app-types-0.8.1.tgz"
   "version" "0.8.1"
 
-"@firebase/app@0.8.4", "@firebase/app@0.x":
+"@firebase/app@^0.8.4", "@firebase/app@0.8.4", "@firebase/app@0.x":
   "integrity" "sha512-gQntijd+sLaGWjcBQpk33giCEXNzGLB6489NMpypVgEXJwQXYQPSrtb9vUHXot1w1iy/j6xlNl4K8wwwNdRgDg=="
   "resolved" "https://registry.npmjs.org/@firebase/app/-/app-0.8.4.tgz"
   "version" "0.8.4"
