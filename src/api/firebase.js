@@ -50,7 +50,7 @@ async function adminUser(user) {
 
 export async function addNewProduct(product, image) {
   const id = uuid();
-  set(ref(database, `products/${uuid()}`), {
+  return set(ref(database, `products/${uuid()}`), {
     ...product,
     id,
     price: parseInt(product.price),
