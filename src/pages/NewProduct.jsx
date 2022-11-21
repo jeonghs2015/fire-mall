@@ -1,5 +1,6 @@
 import { upload } from '@testing-library/user-event/dist/upload';
 import React, { useState } from 'react';
+import { addNewProduct } from '../api/firebase';
 import { uploadImage } from '../api/uploader';
 import Button from '../components/ui/Button';
 
@@ -20,6 +21,7 @@ export default function NewProduct() {
     uploadImage(file)
     .then(url => {
       console.log(url);
+      addNewProduct(product, url);
     })
   };
 
