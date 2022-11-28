@@ -15,7 +15,7 @@ export default function CartItem( {product, uid, product: {id, image, title, opt
   
     return (
         <li>
-            <img src = {image} alt={title} />
+            <img className='w-w4 md:w-48 rounded-lg' src = {image} alt={title} />
             <div>
                 <p>{title}</p>
                 <p>{option}</p>
