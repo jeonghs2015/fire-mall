@@ -1,3 +1,4 @@
+import { QueryClient, useMutation, useQueryClient } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { addNewProduct } from '../api/firebase';
 import { uploadImage } from '../api/uploader';
@@ -8,6 +9,12 @@ export default function NewProduct() {
   const [file, setFile] = useState();
   const [isUploading, setIsUploading] = useState(false);
   const [success, setSuccess] = useState();
+
+  const QueryClient = useQueryClient();
+  const addProduct = useMutation(({product, url}) => addNewProduct(product, url), {
+    onSuccess: () => QueryClient.invalidateQuries(['products']),
+  });
+
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -23,13 +30,12 @@ export default function NewProduct() {
     setIsUploading(true);
     uploadImage(file) //
       .then((url) => {
-        addNewProduct(product, url) //
-          .then(() => {
-            setSuccess('성공적으로 제품이 추가되었습니다.');
+        addProduct.mutate({product, url}, {onSuccess: () => {
+          setSuccess('성공적으로 제품이 추가되었습니다.');
             setTimeout(() => {
               setSuccess(null);
             }, 4000);
-          });
+        }});  
       })
       .finally(() => setIsUploading(false));
   };

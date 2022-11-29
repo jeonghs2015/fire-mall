@@ -1,7 +1,8 @@
 import React from 'react';
-import { RiDeleteBin5Fill } from 'react-icons/ri';
+import { RiDeleteBin5Fill, RiEBike2Fill } from 'react-icons/ri';
 import { AiOutlinePlusSquare, AiOutlineMinusSquare } from 'react-icons/ai';
-import { addOrUpdateToCart, removeFromCart } from '../api/firebase';
+import { addNewProduct, addOrUpdateToCart, removeFromCart } from '../api/firebase';
+import { useMutation } from '@tanstack/react-query';
 
 const ICON_CLASS =
   'transition-all cursor-pointer hover:text-brand hover:scale-105 mx-1';
@@ -39,4 +40,3 @@ export default function CartItem({
     </li>
   );
 }
-
