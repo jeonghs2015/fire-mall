@@ -35,7 +35,7 @@ export default function MyCart() {
           <ul className='border-b border-gray-300 mb-8 p-4 px-8'>
             {products &&
               products.map((product) => (
-                <CartItem key={product.id} product={product} uid={uid} />
+                <CartItem key={product.id} product={product} />
               ))}
           </ul>
           <div className='flex justify-between items-center mb-6 px-2 md:px-8 lg:px-16'>
