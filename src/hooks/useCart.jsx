@@ -9,7 +9,7 @@ export default function useCart() {
         enabled: !!uid,
     });
 
-    const addOrUpdateItem - useMutation(
+    const addOrUpdateItem = useMutation(
         (product) => addOrUpdateToCart(uid, product),
         {
             onSuccess: () => {
