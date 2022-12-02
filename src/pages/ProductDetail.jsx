@@ -20,7 +20,7 @@ export default function ProductDetail() {
     addOrUpdateItem.mutate(product, {
       onSuccess: () => {
         setSuccess('장바구니에 추가되었습니다.');
-        setTimeout(() => setSuccess(null), 30000);
+        setTimeout(() => setSuccess(null), 3000);
       }
     });
   };
