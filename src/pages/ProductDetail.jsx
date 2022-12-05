@@ -53,7 +53,7 @@ export default function ProductDetail() {
             </select>
           </div>
           {success && <p className='my-2'>{success}</p>}
-          <Button text='장바구니에 추가' onClick={handleClick} />
+          <Button text='장바구니에 추가 ' onClick={handleClick} />
         </div>
       </section>
     </>
