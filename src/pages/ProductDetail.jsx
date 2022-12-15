@@ -25,7 +25,7 @@ export default function ProductDetail() {
     });
   };
 
-  
+
   return (
     <>
       <p className='mx-12 mt-4 text-gray-700'>{category}</p>
@@ -60,3 +60,4 @@ export default function ProductDetail() {
     </>
   );
 }
+
