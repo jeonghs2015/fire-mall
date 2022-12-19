@@ -20,7 +20,7 @@ export default function useCart() {
     )
 
     const removeItem = useMutation((id) => removeFromCart(uid, id), {
-        onSuccess: () => {
+        onSuccess: () => { 
             queryClient.invalidateQueries(['carts', uid]);
         },
     });
