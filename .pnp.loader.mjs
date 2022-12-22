@@ -2,6 +2,7 @@ import { URL, fileURLToPath, pathToFileURL } from 'url';
 import fs from 'fs';
 import path from 'path';
 import moduleExports, { Module } from 'module';
+import { QueryClient } from '@tanstack/react-query';
 
 var PathType;
 (function(PathType2) {
