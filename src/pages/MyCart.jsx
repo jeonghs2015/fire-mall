@@ -2,10 +2,12 @@ import React from 'react';
 import { useAuthContext } from '../context/AuthContext';
 import CartItem from '../components/CartItem';
 import { BsFillPlusCircleFill } from 'react-icons/bs';
-import { FaEquals } from 'react-icons/fa';
+import { FaEquals, FaVihara } from 'react-icons/fa';
 import PriceCard from '../components/PriceCard';
 import Button from '../components/ui/Button';
 import useCart from '../hooks/useCart';
+import { render } from '@testing-library/react';
+import { RiMicroscopeFill } from 'react-icons/ri';
 
 const SHIPPING = 3000;
 
@@ -51,3 +53,4 @@ export default function MyCart() {
     </section>
   );
 }
+
